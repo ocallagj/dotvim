@@ -25,7 +25,7 @@ function lscoa
 
 function cdiff 
 {
-    cleartool diff -pred -diff
+    cleartool diff -pred -diff $1
 }
 
 function add_to_path
