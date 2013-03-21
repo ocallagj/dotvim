@@ -2,12 +2,13 @@ set nocompatible
 
 " Pathogen
 "
+call ccase#infect()
 call pathogen#infect()
 
 filetype plugin indent on
 syntax on
-
-set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+set tags=$TAGFILES
+set notagrelative
 
 set number
 set mouse=a
@@ -43,4 +44,6 @@ let NERDTreeKeepTreeInNewTab=1
 let g:nerdtree_tabs_open_on_gui_startup=0
  
 
-colorscheme Tomorrow-Night
+colorscheme solarized
+
+set guioptions-=m
