@@ -55,8 +55,15 @@ set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 
 
-
 map <F2> :NERDTreeToggle<CR>
 map <F3> :BufExplorer<CR>
 map <F4> :TagbarToggle<CR>
+
+if has("gui_running")
+    set guifont=Bitstream_Vera_Sans_Mono:h9.5
+    set lines=50
+    set columns=120
+else
+    set background=dark
+endif
 
