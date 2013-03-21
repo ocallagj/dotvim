@@ -1,9 +1,13 @@
-set nocompatible
+set nocompatible   " Disable vi-compatibility
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+
 
 " Pathogen
 "
 call ccase#infect()
 call pathogen#infect()
+call pathogen#helptags()
 
 filetype plugin indent on
 syntax on
@@ -46,4 +50,13 @@ let g:nerdtree_tabs_open_on_gui_startup=0
 
 colorscheme solarized
 
-set guioptions-=m
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+
+
+
+map <F2> :NERDTreeToggle<CR>
+map <F3> :BufExplorer<CR>
+map <F4> :TagbarToggle<CR>
+
