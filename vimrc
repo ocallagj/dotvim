@@ -56,14 +56,28 @@ set guioptions-=r  "remove right-hand scroll bar
 
 
 map <F2> :NERDTreeToggle<CR>
-map <F3> :BufExplorer<CR>
+map <F3> :CtrlPBuffer<CR>
 map <F4> :TagbarToggle<CR>
 
 if has("gui_running")
     set guifont=Bitstream_Vera_Sans_Mono:h9.5
-    set lines=50
-    set columns=120
+    set lines=60
+    set columns=160
 else
     set background=dark
 endif
+
+function! SwitchSourceHeader()
+    "comment
+    let buffer = ""
+    if (expand ("%:e") == "cpp")
+        exec ":tag " . "%:t:r.h"
+    elseif (expand ("%:e") == "c")
+        exec ":tag " . "%:t:r.h"
+    elseif (expand ("%:e") == "h")
+        exec ":tag " . "%:t:r.cpp"
+    endif
+endfunction
+
+nmap <F5> :call SwitchSourceHeader()<CR>
 

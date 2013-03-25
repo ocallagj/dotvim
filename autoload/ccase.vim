@@ -196,7 +196,7 @@
 if exists('g:loaded_ccase') | finish | endif
 let g:loaded_ccase = 1
 
-function! ccase#infect(...) abort " {{{1
+function! ccase#infect(...)
 endfunction
 
 " ===========================================================================
