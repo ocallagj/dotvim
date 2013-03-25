@@ -1,6 +1,3 @@
-[submodule "bundle/vim-surround"]
-	path = bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
 [submodule "bundle/vim-tomorrow-theme"]
 	path = bundle/vim-tomorrow-theme
 	url = https://github.com/chriskempson/vim-tomorrow-theme.git
