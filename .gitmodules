@@ -37,3 +37,9 @@
 [submodule "bundle/tlib"]
 	path = bundle/tlib
 	url = https://github.com/vim-scripts/tlib.git
+[submodule "bundle/snipmate-snippets"]
+	path = bundle/snipmate-snippets
+	url = https://github.com/honza/snipmate-snippets.git
+[submodule "bundle/align"]
+	path = bundle/align
+	url = https://github.com/vim-scripts/Align.git
