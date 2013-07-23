@@ -58,6 +58,8 @@ set guioptions-=r  "remove right-hand scroll bar
 map <F2> :NERDTreeToggle<CR>
 map <F3> :CtrlPBuffer<CR>
 map <F4> :TagbarToggle<CR>
+map <F6> :tn<CR>
+map <F7> :tp<CR>
 
 if has("gui_running")
     set guifont=Bitstream_Vera_Sans_Mono:h9.5
@@ -71,11 +73,11 @@ function! SwitchSourceHeader()
     "comment
     let buffer = ""
     if (expand ("%:e") == "cpp")
-        exec ":tag " . "%:t:r.h"
+        exec ":tag " . expand("%:t:r") . ".h"
     elseif (expand ("%:e") == "c")
-        exec ":tag " . "%:t:r.h"
+        exec ":tag " . expand("%:t:r") . ".h"
     elseif (expand ("%:e") == "h")
-        exec ":tag " . "%:t:r.cpp"
+        exec ":tag " . expand("%:t:r") . ".cpp"
     endif
 endfunction
 
