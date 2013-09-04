@@ -48,7 +48,6 @@ let NERDTreeKeepTreeInNewTab=1
 let g:nerdtree_tabs_open_on_gui_startup=0
  
 
-colorscheme solarized
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
@@ -62,11 +61,27 @@ map <F6> :tn<CR>
 map <F7> :tp<CR>
 
 if has("gui_running")
+    colorscheme solarized
     set guifont=Bitstream_Vera_Sans_Mono:h9.5
     set lines=60
     set columns=160
 else
     set background=dark
+endif
+
+if has('cscope')
+  set cscopetag cscopeverbose
+
+  if has('quickfix')
+    set cscopequickfix=s-,c-,d-,i-,t-,e-
+  endif
+
+  cnoreabbrev csa cs add
+  cnoreabbrev csf cs find
+  cnoreabbrev csk cs kill
+  cnoreabbrev csr cs reset
+  cnoreabbrev css cs show
+  cnoreabbrev csh cs help
 endif
 
 function! SwitchSourceHeader()
