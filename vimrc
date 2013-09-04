@@ -6,7 +6,6 @@ set encoding=utf-8 " Necessary to show Unicode glyphs
 " Pathogen
 "
 call ccase#infect()
-call cscope#infect()
 call pathogen#infect()
 call pathogen#helptags()
 
