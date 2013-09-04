@@ -70,6 +70,7 @@ else
 endif
 
 if has('cscope')
+    source cscope_maps.vim
   set cscopetag cscopeverbose
 
   if has('quickfix')
